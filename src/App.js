@@ -1,25 +1,23 @@
-import logo from './logo.svg';
+
 import './App.css';
+import axios from "axios";
+import { useState } from "react";
+import Todo from "./components/Todo/Todo.js"
+import Auth from "./components/Auth/Auth.js"
 
 function App() {
+  const [token, setToken] = useState(!!window.localStorage.getItem("token"));
+  const [activeID, setActiveID] = useState(!!window.localStorage.getItem("activeID"));
+  const checkAuth = (param) => {
+    
+      setToken(param);
+      setActiveID(param);
+   
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    token && activeID ? <Todo  checkAuth={checkAuth}/> : <Auth checkAuth={checkAuth} />
+    
+  )
 }
 
 export default App;
