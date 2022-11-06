@@ -1,0 +1,23 @@
+.addItem{
+    margin-left: -10px;
+   display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    div, button{
+      
+       justify-content: space-between;
+    }
+    div>input{
+        width: 31vw;
+    }
+    button{
+        width: 18vw;
+        height: 40px;
+        margin-left: 10px;
+    }
+}
+.addItemDiv{
+    display: flex;
+   
+   
+}

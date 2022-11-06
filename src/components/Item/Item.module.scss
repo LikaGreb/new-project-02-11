@@ -1,0 +1,28 @@
+.item{
+  
+    display:flex;
+    gap: 20px;
+    align-items:center;
+    justify-content: space-between;
+    padding:5px;
+    border: 1px solid lightblue;
+}
+.checked{
+  text-decoration: line-through ;
+  text-align: left;
+}
+.buttons{
+  display:flex;
+    gap: 20px;
+    align-items: center;
+}
+.checkInput{
+  display: flex;
+  text-align: left;
+  p{
+    margin-left: 10px;
+  }
+}
+input{
+  margin-left: 10px;
+}
